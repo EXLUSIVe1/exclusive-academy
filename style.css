@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* RESET */
 * {
   margin: 0;
@@ -532,4 +533,134 @@ body {
   background-size: cover; /* rasm ekranni to‘liq qoplaydi */
   color: #333;
   line-height: 1.6;
+=======
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("images/house.jpg") no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+header {
+  padding: 40px 20px 20px;
+}
+
+header .logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid gold;
+  margin-bottom: 15px;
+  animation: pulse 2s infinite;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #d4af37;
+  margin: 10px 0;
+}
+
+header p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.links {
+  max-width: 400px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  color: #0d0d0d;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+
+.links a i {
+  font-size: 18px;
+}
+
+.links a:hover {
+  background: linear-gradient(135deg, #fff, #d4af37);
+  transform: scale(1.05);
+  color: #000;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+footer {
+  background: #000;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #d4af37;
+  margin: 0;
+}
+
+.logo-text {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0d0d0d;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.premium-rasm {
+  background-image: url("images/house.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+  .links a {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 10px gold; }
+  50%  { box-shadow: 0 0 30px gold; }
+  100% { box-shadow: 0 0 10px gold; }
+>>>>>>> 7b4d0ec54a3f2d151bd4cf6c313d44ece57e4b0b
 }
