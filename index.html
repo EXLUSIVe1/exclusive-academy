@@ -131,28 +131,29 @@
 
   <!-- Aloqa formasi -->
   <section id="contact">
-    <form id="contactForm">
-      <label for="ismingiz" data-key="name">Ismingiz</label>
-      <input type="text" id="ismingiz" name="ismingiz" placeholder="Ismingiz" required>
+    <form action="https://formspree.io/f/xvgwrzwe" method="POST">
+  <label for="name">Ismingiz</label>
+  <input type="text" id="name" name="name" placeholder="Ismingiz" required>
 
-      <label for="telefon" data-key="phone">Telefon raqamingiz</label>
-      <input type="tel" id="telefon" name="telefon" placeholder="+998901234567" required>
+  <label for="phone">Telefon raqamingiz</label>
+  <input type="tel" id="phone" name="phone" placeholder="+998901234567" required>
 
-      <label for="course" data-key="choose_course">Kursni tanlang</label>
-      <select id="course" name="course" required>
-        <option value="" disabled selected data-key="choose_course">Kursni tanlang</option>
-        <option value="english" data-key="course_en">Ingliz tili</option>
-        <option value="ielts" data-key="course_ielts">IELTS</option>
-        <option value="russian" data-key="course_ru">Rus tili</option>
-        <option value="korean" data-key="course_kr">Koreys tili</option>
-        <option value="mobile" data-key="course_mob">Mobilografiya</option>
-        <option value="president" data-key="course_prez">Prezident maktabiga tayyorlov</option>
-        <option value="math" data-key="course_math">Matematika</option>
-        <option value="law" data-key="course_law">Huquq</option>
-      </select>
+  <label for="course">Kursni tanlang</label>
+  <select id="course" name="course" required>
+    <option value="" disabled selected>Kursni tanlang</option>
+    <option value="english">Ingliz tili</option>
+    <option value="ielts">IELTS</option>
+    <option value="russian">Rus tili</option>
+    <option value="korean">Koreys tili</option>
+    <option value="mobile">Mobilografiya</option>
+    <option value="president">Prezident maktabiga tayyorlov</option>
+    <option value="math">Matematika</option>
+    <option value="law">Huquq</option>
+  </select>
 
-      <button type="submit" data-key="send">Yuborish</button>
-    </form>
+  <button type="submit">Yuborish</button>
+</form>
+
   </section>
 
   <!-- Footer -->
