@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* RESET */
 * {
   margin: 0;
@@ -9,658 +8,1001 @@
 /* BODY */
 body {
   font-family: 'Poppins', sans-serif;
-  background: url("images/fonn.jpg") no-repeat center center fixed;
-  background-size: cover; /* Rasm butun ekranni qoplaydi */
-  color: #333;
+  color: #fff;
+  background: url("./images/exclusive.jpg") no-repeat center center fixed;
+  background-size: cover;
   line-height: 1.6;
 }
 
-/* NAVBAR */
-header {
-  background: rgba(34,34,34,0.9); /* biroz shaffof qildim */
+/* Header */
+header.navbar {
+  background: transparent; /* fonni olib tashladim */
   padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  text-align: center;
 }
 
-.navbar {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar .logo {
-  color: #fff;
+header .logo {
   font-size: 22px;
   font-weight: 700;
+  color: #ff9800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-.navbar ul {
+header .nav-links {
   list-style: none;
   display: flex;
-}
-
-.navbar ul li {
-  margin-left: 20px;
-}
-
-.navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  background: #f39c12;
-  color: #fff;
-}
-
-/* HERO SECTION (bosh sahifa banner) */
-.hero {
-  background: url("images/academy.jpg") no-repeat center center/cover;
-  height: 90vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 20px;
+  gap: 25px;
 }
 
-.hero h1 {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 20px;
-  margin: 20px 0;
-}
-
-.hero .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #f39c12;
-  color: #fff;
-  border-radius: 5px;
+header .nav-links li a {
   text-decoration: none;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.hero .btn:hover {
-  background: #d35400;
-}
-
-/* SECTIONS */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-  background: rgba(255,255,255,0.9); /* fon rasm ustida oq shaffof */
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 1200px;
-}
-
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.section p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* COURSES GRID */
-.courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.course-card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: 0.3s;
-  text-align: left;
-}
-
-.course-card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.course-card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.course-card p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.course-card a {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #f39c12;
   color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
 }
 
-.course-card a:hover {
-  background: #d35400;
+header .nav-links li a:hover {
+  color: #ff9800;
 }
 
-/* FORM (kursga yozilish) */
-.form-box {
-  background: rgba(255,255,255,0.95);
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #f39c12;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f39c12;
+}
+
+section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* CARDS (for kurslar) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin: 20px auto;
-  max-width: 450px;
-  text-align: left;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.form-box label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #333;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.form-box input,
-.form-box select {
-  width: 100%;
-  padding: 12px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 15px;
+.card h3 {
+  color: #f39c12;
+  margin-bottom: 10px;
 }
 
-.form-box button {
-  margin-top: 15px;
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
+/* FORM SECTION */
+.contact-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form button {
+  padding: 12px 15px;
   font-size: 16px;
-  transition: 0.3s;
+  border: 2px solid #ff9900;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
-.form-box button:hover {
-  background: #444;
+/* Input va select */
+.contact-form input,
+.contact-form select {
+  background: #fff;
+  color: #333;
+  min-width: 200px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+  border-color: #ff6600;
+  box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+
+/* Button */
+.contact-form button {
+  background: #ff9900;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.contact-form button:hover {
+  background: #e68900;
+  transform: scale(1.05);
 }
 
 /* FOOTER */
 footer {
-  background: rgba(34,34,34,0.9);
-  color: #fff;
+  background: #111;
+  padding: 30px 20px;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer .contact {
+  margin-top: 15px;
+  line-height: 1.8;
 }
 
 footer a {
   color: #f39c12;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 footer a:hover {
-  text-decoration: underline;
+  color: #fff;
 }
 
-/* Grid tartib */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-/* Card stili */
-.card {
-  text-align: center;
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+}
+/* CONTACT SECTION */
+#contact {
+  padding: 40px 25px;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 450px;
+  margin: 40px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-.card:hover {
+#contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #222;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select {
+  padding: 14px 16px;
+  font-size: 15px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  background: #fafafa;
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+  border-color: #f39c12;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(243, 156, 18, 0.5);
+}
+
+/* BUTTON */
+.contact-form button {
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f39c12;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e68900;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+/* SELECT STYLING */
+.contact-form select {
+  padding: 14px 16px;
+  font-size: 16px;   /* yozuvni kattalashtirish */
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  background: #fafafa;
+  appearance: none;  /* brauzer default stilini olib tashlaydi */
+}
+
+/* OPTION STYLING */
+.contact-form select option {
+  font-size: 16px;   /* dropdowndagi yozuvni ham kattalashtiradi */
+  padding: 12px;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Rasmlar bir xil balandlikda to‘liq ko‘rinishi uchun */
-.card img {
+.course-card img {
   width: 100%;
-  height: 250px;
-  object-fit: contain;
-  background: #fff;
-  padding: 10px;
+  height: 180px;  /* ← Hamma rasm bir xil bo‘ladi */
+  object-fit: cover; /* Rasmlarni sig‘dirib beradi */
 }
 
-/* Matn */
-.card h3, .card a {
-  display: block;
-  padding: 15px;
+.course-card h3 {
   font-size: 18px;
   font-weight: 600;
-  text-decoration: none;
-  color: #222;
-  transition: color 0.3s ease;
-}
-
-.card a:hover {
-  color: #0077ff;
-}
-/* BODY */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: url("images/fonn.jpg") no-repeat center center fixed;
-  background-size: cover; /* Rasm butun ekranni qoplaydi */
+  padding: 15px;
   color: #333;
-  line-height: 1.6;
 }
-
-/* SECTIONS */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-  background: rgba(255,255,255,0.7); /* fon rasm ko‘rinadigan qilib shaffofroq qildim */
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 1200px;
-}
-
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-/* Card stili */
-.card {
-  text-align: center;
-  background: rgba(255,255,255,0.9); /* oq fon lekin orqa fon ham ko‘rinadi */
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-/* Rasmlar */
-.card img {
+.course-card img {
   width: 100%;
-  height: 250px;
-  object-fit: contain;
-  background: #fff;
-  padding: 10px;
+  height: 180px;
+  object-fit: contain;  /* Rasmlar siqilmaydi, to‘liq chiqadi */
+  background: #fff;     /* Bo‘sh joy oq bo‘ladi */
 }
 
-/* Umumiy sozlamalar */
+
+
+.course-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+/* Navbar asosiy */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #555;
+  padding: 15px;
+}
+
+.navbar .logo {
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: orange;
+}
+
+/* Dropdown menyu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #444;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  min-width: 160px;
+}
+
+.dropdown-menu li {
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  background: orange;
+  color: #fff;
+}
+
+/* Hover bo‘lganda chiqarish */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Footer — oq rangli matn */
+footer,
+footer p,
+footer .footer-links,
+footer .footer-links a {
+  color: #ffffff !important;
+}
+
+/* Agar footer fonini ham qorong‘i qilishni xohlasangiz (ixtiyoriy):
+footer { background: #111; }
+*/
+/* Footer kontakt qatori oq rang */
+footer p,
+footer p a {
+  color: #ffffff;         /* Oq rang */
+  text-decoration: none;  /* Ostiga chiziq chiqmasin */
+  font-size: 15px;        /* Professional ko‘rinishi uchun */
+  font-weight: 400;       /* Juda qalin bo‘lmasin */
+}
+
+footer p a:hover {
+  color: #ff9800;         /* Hoverda sariq (exclusive academy brendi uslubida) */
+  transition: 0.3s;
+}
+/* Footer umumiy */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #222;
+  color: #ff9800; /* asosiy sariq rang */
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+/* Footer linklar */
+footer .footer-links a {
+  color: #ff9800;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 500;
+}
+
+footer .footer-links a:hover {
+  color: #fff;  /* Hoverda oq bo‘ladi */
+  transition: 0.3s;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #222;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer links */
+footer .footer-links {
+  margin-bottom: 8px;
+}
+
+footer .footer-links a {
+  color: #ff9800; /* sariq */
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+footer .footer-links a:hover {
+  color: #fff; /* hoverda oq */
+}
+
+footer p {
+  color: #ccc;
+  font-size: 13px;
+}
+.course-card {
+  background: url("images/fonii.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: #fff; /* matn oq bo‘lsin */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.course-card h3 {
+  margin-top: 10px;
+  color: #fff; /* oq yozuv */
+}
+.contact-form {
+  background: url("images/fonii.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  color: #fff; /* matn oq bo‘lsin */
+  text-align: center;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  color: #fff; /* sarlavha oq */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form input,
+.contact-form select {
+  background: rgba(0, 0, 0, 0.6); /* yarim qora shaffof */
+  color: #fff;
+}
+
+.contact-form button {
+  background: orange;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #ff6600;
+  color: #fff;
+}
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: 'Poppins', sans-serif;
+  background: url("images/fonii.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* COURSES GRID */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* COURSE CARD */
+.course-card {
+  background: url("images/fonii.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.course-card h3 {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 12px;
+  font-size: 16px;
+}
+.contact {
+  background: url("images/4cbf69da-403c-41c9-b342-3e2ef4753a98.png") no-repeat center center;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 10px;
+  color: white; /* matn oq bo‘lsin */
+}
+#lang-switcher {
+  text-align: right;
+  margin: 15px 30px;
+}
+#lang-switcher button {
+  background: transparent;
+  border: 2px solid #ff9800;
+  color: #fff;
+  font-weight: bold;
+  padding: 6px 14px;
+  margin-left: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#lang-switcher button:hover {
+  background: #ff9800;
+  color: #000;
+}
+.course-card img {
+  width: 100%;
+  height: 180px; /* kartochkalar bir xil bo‘lsin */
+  object-fit: contain; /* rasmni kesmasdan to‘liq chiqaradi */
+  border-radius: 6px;
+  background: url("images/fonii.jpg") center/cover no-repeat; /* oq joyni fon bilan to‘ldirish */
+  padding: 5px;
+}
+.hero-image {
+  margin-top: 15px;    /* yozuv tagidan joy tashlash */
+  max-width: 300px;    /* rasm kengligi */
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* ixtiyoriy yumaloqlash */
+}
+.hero-image {
+  max-width: 100%;   /* ekran bo‘yicha joylashadi */
+  height: auto;      /* proporsiyasini saqlaydi */
+  margin: 20px 0;    /* tepaga va pastga joy tashlaydi */
+  border-radius: 12px; /* burchaklari yumaloq chiqishi uchun */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5); /* soyasi bilan chiroyliroq */
+}
+.course-card h3,
+.course-card p {
+  color: #fff;
+}
+p {
+  color: #fff !important;  /* barcha p lar oq bo‘ladi */
+}
+
+/* Agar faqat mobil uchun alohida yozmoqchi bo‘lsangiz */
+@media (max-width: 768px) {
+  p {
+    color: #fff !important;
+    font-size: 14px; /* mobil uchun matn kichikroq bo‘lishi mumkin */
+  }
+}
+.course-text {
+  color: #fff !important;
+}
+footer {
+  background: url("images/fonii.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff; /* yozuv oq bo‘lsin */
+  padding: 20px;
+  text-align: center;
+}
+footer {
+  background: url("fonii.jpg") no-repeat center center;
+  background-size: cover;
+}
+/* Umumiy style */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url("images/fonii.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
   line-height: 1.6;
-  background: #f5f5f5;
-  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Til tugmalari */
+#lang-switcher {
+  text-align: right;
+  margin: 15px 30px;
+}
+#lang-switcher button {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid #ff9800;
+  color: #fff;
+  padding: 5px 12px;
+  margin-left: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#lang-switcher button:hover {
+  background: #ff9800;
 }
 
 /* Navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #1a2e1f;
-  padding: 15px 40px;
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
 }
-
-.logo {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
+.navbar .logo {
+  color: #ff9800;
 }
-
-.navbar ul {
+.nav-links {
+  list-style: none;
   display: flex;
   gap: 20px;
-  list-style: none;
 }
-
-.navbar ul li a {
+.nav-links li a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
   transition: 0.3s;
 }
-
-.navbar ul li a:hover,
-.navbar ul li a.active {
-  background: #ffd700;
-  color: #000;
+.nav-links li a:hover {
+  color: #ff9800;
 }
 
-/* Grid kartochkalar */
-.grid {
+/* Hero */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 28px;
+  color: #ff9800;
+}
+.hero p {
+  max-width: 700px;
+  margin: 15px auto;
+  font-size: 16px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff9800;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e68900;
+}
+
+/* Kurslar */
+.courses {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   padding: 40px;
 }
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
+.course-card {
+  background: rgba(0,0,0,0.6);
+  border-radius: 8px;
   text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card h3 {
   padding: 15px;
-  font-size: 18px;
+  transition: 0.3s;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+}
+.course-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: rgb(28, 41, 26);
+  border-radius: 8px;
+}
+form input, form select {
+  padding: 10px;
+    background: 1px solid  rgb(51, 208, 26);
+  
+  border-radius: 6px;
+}
+form button {
+  background: #ff9800;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+form button:hover {
+  background: #e68900;
 }
 
 /* Footer */
 footer {
-  background: #1a2e1f;
-  color: #fff;
   text-align: center;
   padding: 20px;
+  margin-top: 40px;
+  background: rgba(0,0,0,0.7);
+  color: #ddd;
 }
-
-/* 📱 Responsiv qoidalar */
-
-/* Planshet (768px dan kichik) */
-@media (max-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .navbar ul {
-    gap: 10px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
+footer a {
+  color: #ff9800;
+  text-decoration: none;
 }
-
-/* Telefon (576px dan kichik) */
-@media (max-width: 576px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar ul li {
-    width: 100%;
-  }
-
-  .navbar ul li a {
-    display: block;
-    width: 100%;
-    padding: 12px;
-  }
-
-  .card img {
-    height: 160px;
-  }
-
-  .card h3 {
-    font-size: 16px;
-  }
+footer a:hover {
+  text-decoration: underline;
 }
-.course-form {
-  max-width: 400px;
-  margin: 30px auto;
-  background: url("images/form-bg.png") no-repeat center center/cover;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.course-card img {
+  width: 100%;       /* Karta kengligiga moslashadi */
+  height: 120px;     /* Hamma bayroq uchun bir xil balandlik */
+  object-fit: cover; /* Rasmlar deformatsiyaga uchramasdan kesiladi va to‘liq ko‘rinadi */
+  border-radius: 5px;
 }
-/* Fanlar grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.course-card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  background: #f2f2f2;
   text-align: center;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ✅ Rasmni kattalashtirish */
-.card img {
-  width: 100%;
-  height: 180px;   /* balandligini tenglashtiradi */
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-
-.card:hover img {
-  transform: scale(1.05);
-}
-
-.card h3 {
-  font-size: 16px;
-  margin-top: 8px;
-  color: #222;
-}
-.card img {
-  width: 100%;
-  height: 180px;   /* Balandlik barqaror bo‘lib turadi */
-  object-fit: contain; /* ✅ Rasmni to‘liq ko‘rsatadi */
-  background-color: #f9f9f9; /* Orqa fon oqish rangda */
-  border-radius: 10px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
-}
-/* Body */
-body {
-  font-family: 'Poppins', sans-serif;
-  background: url("images/git.jpg") no-repeat center center fixed; /* ✅ fon rasmi */
-  background-size: cover; /* rasm ekranni to‘liq qoplaydi */
-  color: #333;
-  line-height: 1.6;
-=======
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: url("images/house.jpg") no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  min-height: 100vh;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: -1;
-}
-
-header {
-  padding: 40px 20px 20px;
-}
-
-header .logo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid gold;
-  margin-bottom: 15px;
-  animation: pulse 2s infinite;
-}
-
-header h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #d4af37;
-  margin: 10px 0;
-}
-
-header p {
-  font-size: 16px;
-  color: #ccc;
-}
-
-.links {
-  max-width: 400px;
-  margin: 30px auto;
+  border-radius: 8px;
+  transition: all 0.5s;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+}
+
+.course-card img {
+  width: 100%;          /* Karta kengligiga moslashadi */
+  height: 120px;        /* Balandlik bir xil */
+  object-fit: contain;   /* Deformatsiya bo‘lmaydi, rasmlar to‘liq ko‘rinadi */
+  border-radius: 5px;
+  background-color: #fff; /* Orqa fon bo‘sh joyni to‘ldiradi */
+  padding: 5px;
+}
+.course-card img {
+  width: 100% !important;       /* Kenglik karta bilan moslashadi */
+  height: 120px !important;     /* Balandlik bir xil bo‘ladi */
+  object-fit: contain !important; /* Rasm deformatsiyaga uchramaydi va to‘liq ko‘rinadi */
+  border-radius: 5px !important;
+  background-color: #fff !important;
+  padding: 5px !important;
+  display: block !important;
+}
+header {
+  display: flex;               /* Flex konteyner */
+  flex-direction: column;      /* Elementlar ustma-ust joylashadi */
+  align-items: center;         /* Gorizontal markazga hizalanadi */
+  text-align: center;          /* Matn markazlashadi */
   padding: 20px;
 }
 
-.links a {
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px;
-  background: linear-gradient(135deg, #d4af37, #b8860b);
-  color: #0d0d0d;
+  gap: 20px;                   /* Menyu elementlari orasidagi bo‘sh joy */
+}
+
+header nav ul li a {
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: all 0.3s ease;
+  color: inherit;
+  font-weight: 500;
+}
+/* Header uchun */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.links a i {
-  font-size: 18px;
+/* Logo rasmi o'lchami */
+.logo {
+  width: 50px;
+  height: 50px;
 }
 
-.links a:hover {
-  background: linear-gradient(135deg, #fff, #d4af37);
-  transform: scale(1.05);
+/* Olov rangli effekt (fire text) */
+.fire-text {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff4d4d, #ffb84d, #ffd11a, #ff4d4d);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fireGradient 3s ease infinite;
+}
+
+/* Gradient animatsiyasi */
+@keyframes fireGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
   color: #000;
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+  font-weight: bold;
+}
+/* Kurslar bo'limi fon rasm */
+#courses {
+  background: url("images/fonn.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px; /* bo‘shliqni sozlash */
+  border-radius: 10px;
+}
+/* Kurslar bo'limining fonini o'zgartirish */
+#courses {
+  background: url("images/fonn.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px;
+  border-radius: 10px;
 }
 
-footer {
-  background: #000;
-  padding: 15px;
-  margin-top: 40px;
+/* Kurs kartalarining fonini shaffof qilish */
+.course-card {
+  background: rgba(255, 255, 255, 0.7); /* oq rang, 70% shaffoflik */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 200px;
 }
 
-footer p {
-  font-size: 14px;
-  color: #d4af37;
-  margin: 0;
+/* Hover effekti saqlanadi */
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.logo-text {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #d4af37, #b8860b);
+.course-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Kurslar bo'limining fonini o'zgartirish */
+#courses {
+  background: url("images/fonn.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 40px 20px; /* bo'lim ichidagi bo'shliq */
+  border-radius: 10px; /* agar xohlasa */
+}
+.course-card {
+  background: url("fonn.jpg") no-repeat center center;
+  background-size: cover;
+  border-radius: 10px; /* Agar yumaloq burchak kerak bo‘lsa */
+}
+.form-box {
+  background: none;   /* Kulrang fonni olib tashlaydi */
+  box-shadow: none;   /* Soyani olib tashlaydi */
+  border: none;       /* Agar chizig‘i bo‘lsa olib tashlaydi */
+}
+.kurs {
+  border-radius: 20px; /* faqat burchaklari yumaloqlashadi */
+}
+.kurs {
+  width: 150px;      /* element o‘lchami */
+  height: 150px;
+  border-radius: 50%; /* dumaloq qilib qo‘yadi */
+  overflow: hidden;   /* ichidagi rasm tashqariga chiqmasligi uchun */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
-  font-weight: 700;
-  color: #0d0d0d;
-  margin: 0 auto 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  flex-direction: column;
+  background: #fff;   /* orqa fon */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
-.premium-rasm {
-  background-image: url("images/house.jpg");
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: 300px;
-  border-radius: 15px;
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 24px;
-  }
-  .links a {
-    font-size: 14px;
-    padding: 12px;
-  }
-}
-
-@keyframes pulse {
-  0%   { box-shadow: 0 0 10px gold; }
-  50%  { box-shadow: 0 0 30px gold; }
-  100% { box-shadow: 0 0 10px gold; }
->>>>>>> 7b4d0ec54a3f2d151bd4cf6c313d44ece57e4b0b
+.course-card h3 {
+  background-color: #20312000; /* Yashil fon */
+  color: #fbfbfb;               /* Matn oq bo‘lsin */
+  padding: 5px 10px;         /* Fon ichidagi bo‘shliq */
+  border-radius: 5px;        /* Burchaklarni yumaloqlash */
+  text-align: center;        /* Matnni o‘rtaga joylash */
 }

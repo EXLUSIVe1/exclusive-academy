@@ -4,38 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingliz tili kursi – Exclusive Academy</title>
-   <link rel="icon" type="image/jpeg" href="images/logooo.jpg?v=4">
-  <link rel="shortcut icon" type="image/jpeg" href="logooo.jpg?v=4">
-
+  <link rel="icon" type="image/jpeg" href="images/logooo.jpg?v=4">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      text-align: center;
+    }
+    h2 {
+      color: #222;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .form-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .form-box label {
+      text-align: left;
+      font-weight: bold;
+      color: #333;
+    }
+    .form-box input, .form-box select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    .form-box button {
+      background: #ff9800;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .form-box button:hover {
+      background: #e68900;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background: #222;
+      color: #ddd;
+    }
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
     <nav class="navbar">
       <h1 class="logo">Exclusive Academy</h1>
       <ul>
-        <ul>
-  <li><a href="index.html">Bosh sahifa</a></li>
- 
-</ul>
-
-
-
+        <li><a href="index.html">🏠 Bosh sahifa</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="section">
     <div class="container">
-      <h2>Ingliz tili kursi</h2>
-      <p>
-        Ingliz tili kurslarimizda siz 0 dan yuqori darajagacha ko‘tarilasiz.
-        Darslarimiz amaliy suhbat, interaktiv mashqlar va zamonaviy metodika asosida olib boriladi.
-        <br><br>
-        ✅ Boshlang‘ichdan professional darajagacha  
-        ✅ Kafolatlangan natija  
-        ✅ Xalqaro standartlar asosida  
-      </p>
+      <h2> Ingliz tili kursi</h2>
+     <p style="color: #fff;">
+  Ingliz tili kursimizda grammatika, so‘z boyligi va gapirish ko‘nikmalarini o‘rganasiz...
+</p>
+
 
       <h3>📋 Kursga yozilish</h3>
       <form action="https://formspree.io/f/xvgwrzwe" method="POST" class="form-box">
@@ -48,15 +102,12 @@
         <label>Qaysi kursga yozilmoqchisiz?</label>
         <select name="kurs">
           <option value="Ingliz tili" selected>Ingliz tili</option>
-          <option value="IELTS">Ielts</option>
+          <option value="IELTS">IELTS</option>
           <option value="Rus tili">Rus tili</option>
           <option value="Koreys tili">Koreys tili</option>
           <option value="Mobilografiya">Mobilografiya</option>
           <option value="Matematika">Matematika</option>
           <option value="Huquq">Huquq</option>
-          <option value="Prizident maktabiga tayyorlov">Prizident maktabiga tayyorlov </option>
-
-
         </select>
 
         <button type="submit">📨 Yozilish</button>
@@ -68,7 +119,7 @@
     <p>📍 <a href="https://maps.app.goo.gl/qv2kVywBNgHSncZw7" target="_blank">Manzil</a></p>
     <p>📞 <a href="tel:+998785551378">+998 78 555 51 378</a></p>
     <p>📷 <a href="https://www.instagram.com/exclusive__academy" target="_blank">Instagram</a></p>
-<p>&copy; Sayt Exclusive Academy tomonidan yaratilgan</p>
+    <p>&copy; 2025 Exclusive Academy – Barcha huquqlar himoyalangan</p>
   </footer>
 </body>
 </html>
