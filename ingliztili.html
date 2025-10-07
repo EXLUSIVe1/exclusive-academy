@@ -4,122 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingliz tili kursi – Exclusive Academy</title>
-  <link rel="icon" type="image/jpeg" href="images/logooo.jpg?v=4">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="images/logooo.jpg">
   <style>
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('images/fonn.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      position: relative;
       text-align: center;
     }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+      color: #111;
+      letter-spacing: 1px;
+    }
+
+    .back-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background: #8c7300;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #b99d2a;
+      transform: scale(1.05);
+    }
+
+    section {
+      margin: 60px auto;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    section img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 25px;
+    }
+
     h2 {
-      color: #222;
-      font-size: 28px;
+      font-size: 1.8rem;
+      color: #111;
       margin-bottom: 15px;
     }
+
     p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #444;
+      font-size: 1rem;
+      color: #222;
+      font-weight: 500;
       margin-bottom: 20px;
     }
-    .form-box {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+
+    .info-box {
+      background: #fff9db;
       padding: 20px;
-      border-radius: 8px;
-      background: #f9f9f9;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .form-box label {
+      border-radius: 10px;
+      margin-top: 25px;
       text-align: left;
-      font-weight: bold;
-      color: #333;
+      border-left: 5px solid #b99d2a;
     }
-    .form-box input, .form-box select {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
+
+    .info-box h3 {
+      color: #111;
+      margin-top: 0;
     }
-    .form-box button {
-      background: #ff9800;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .form-box button:hover {
-      background: #e68900;
-    }
+
     footer {
+      background: rgba(255, 255, 255, 0.88);
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      background: #222;
-      color: #ddd;
+      padding: 25px;
+      font-size: 14px;
+      border-top: 2px solid #ccc;
     }
+
     footer a {
-      color: #ff9800;
+      color: #111;
       text-decoration: none;
+      font-weight: 500;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <nav class="navbar">
-      <h1 class="logo">Exclusive Academy</h1>
-      <ul>
-        <li><a href="index.html">🏠 Bosh sahifa</a></li>
-      </ul>
-    </nav>
+    <a href="index.html" class="back-btn">← Bosh sahifaga qaytish</a>
+    <h1>Ingliz tili kursi</h1>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2> Ingliz tili kursi</h2>
-     <p style="color: #fff;">
-  Ingliz tili kursimizda grammatika, so‘z boyligi va gapirish ko‘nikmalarini o‘rganasiz...
-</p>
+  <section>
+    <img src="images/uk.jpg" alt="Ingliz tili kursi rasmi">
+    <h2>Ingliz tilini mukammal o‘rganing</h2>
 
+    <p>
+      Ushbu kurs sizga ingliz tilini boshlang‘ichdan professional darajagacha o‘rgatadi.
+      Grammatikani mustahkamlaymiz, so‘z boyligini oshiramiz va talaffuzni yaxshilaymiz.
+    </p>
 
-      <h3>📋 Kursga yozilish</h3>
-      <form action="https://formspree.io/f/xvgwrzwe" method="POST" class="form-box">
-        <label>Ismingiz:</label>
-        <input type="text" name="ism" required>
-
-        <label>Telefon raqamingiz:</label>
-        <input type="tel" name="telefon" placeholder="+998901234567" required>
-
-        <label>Qaysi kursga yozilmoqchisiz?</label>
-        <select name="kurs">
-          <option value="Ingliz tili" selected>Ingliz tili</option>
-          <option value="IELTS">IELTS</option>
-          <option value="Rus tili">Rus tili</option>
-          <option value="Koreys tili">Koreys tili</option>
-          <option value="Mobilografiya">Mobilografiya</option>
-          <option value="Matematika">Matematika</option>
-          <option value="Huquq">Huquq</option>
-        </select>
-
-        <button type="submit">📨 Yozilish</button>
-      </form>
+    <div class="info-box">
+      <h3>📘 Kurs haqida</h3>
+      <p>
+        <strong>Ingliz tili kursi</strong> — bu nafaqat til o‘rganish, balki zamonaviy aloqa, ish va ta’lim imkoniyatlariga
+        yo‘l ochuvchi eng muhim ko‘nikmadir. Darslarimizda siz:
+      </p>
+      <ul>
+        <li>Grammatika va talaffuzni mukammal o‘rganasiz;</li>
+        <li>Speaking, Listening, Reading, Writing ko‘nikmalarini rivojlantirasiz;</li>
+        <li>IELTS yoki boshqa xalqaro imtihonlarga tayyorlanasiz;</li>
+        <li>Interaktiv mashg‘ulotlar va real suhbatlar orqali mashq qilasiz.</li>
+      </ul>
+      <p>
+        Darslar <strong>tajribali ustozlar</strong> tomonidan olib boriladi, har bir talaba uchun individual yondashuv
+        qo‘llaniladi. O‘quvchilar natija olishiga kafolat beramiz.
+      </p>
     </div>
   </section>
 
   <footer>
-    <p>📍 <a href="https://maps.app.goo.gl/qv2kVywBNgHSncZw7" target="_blank">Manzil</a></p>
-    <p>📞 <a href="tel:+998785551378">+998 78 555 51 378</a></p>
-    <p>📷 <a href="https://www.instagram.com/exclusive__academy" target="_blank">Instagram</a></p>
-    <p>&copy; 2025 Exclusive Academy – Barcha huquqlar himoyalangan</p>
+    <p>📍 <a href="https://maps.app.goo.gl/uLWnCz57KkHYW2o67" target="_blank">Xorazm, Uzbekistan</a></p>
+    <p>📞 <a href="tel:+998785551378">+998 78 555 13 78</a></p>
+    <p>📷 <a href="https://www.instagram.com/exclusive__academy?utm_source=ig_web_button_share_sheet&igsh=MTdtbDhyc3BicXhsYQ==" target="_blank">Instagram: @exclusive__academy</a></p>
+    <p>© 2025 Exclusive Academy – Barcha huquqlar himoyalangan</p>
   </footer>
+
 </body>
 </html>

@@ -958,6 +958,7 @@ nav ul li a {
 }
 
 /* Hover effekti saqlanadi */
+
 .course-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
@@ -1006,3 +1007,5 @@ nav ul li a {
   border-radius: 5px;        /* Burchaklarni yumaloqlash */
   text-align: center;        /* Matnni o‘rtaga joylash */
 }
+background: url('images/fonn.jpg') no-repeat center center fixed;
+background-size: cover;

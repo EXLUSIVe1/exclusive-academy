@@ -4,15 +4,11 @@
     uz: { 
       title:"Exclusive Academy – O'quv Markazi", 
       logo:"Exclusive Academy", 
-      home:"Bosh sahifa", 
-      courses:"Kurslar", 
-      contact:"Aloqa",
       hero_title:"Exclusive Academy – kelajak kaliti ✨", 
       hero_text:"Exclusive Academy – bu nafaqat bilim olish joyi, balki kelajak sari dadil qadam qo‘yadigan maydon.", 
       see_courses:"📚 Kurslarimizni ko‘rish",
       name:"Ismingiz", 
       phone:"Telefon raqamingiz", 
-      choose_course:"Kursni tanlang", 
       send:"Yuborish",
       course_en:"Ingliz tili", 
       course_ielts:"IELTS", 
@@ -28,15 +24,11 @@
     ru: { 
       title:"Exclusive Academy – Учебный Центр", 
       logo:"Эксклюзив Академия", 
-      home:"Главная", 
-      courses:"Курсы", 
-      contact:"Контакты",
       hero_title:"Exclusive Academy – ключ к будущему ✨", 
       hero_text:"Exclusive Academy – это не только место получения знаний, но и пространство для уверенного шага в будущее...", 
       see_courses:"📚 Смотреть курсы",
       name:"Ваше имя", 
       phone:"Ваш телефон", 
-      choose_course:"Выберите курс", 
       send:"Отправить",
       course_en:"Английский язык", 
       course_ielts:"IELTS", 
@@ -52,15 +44,11 @@
     en: { 
       title:"Exclusive Academy – Learning Center", 
       logo:"Exclusive Academy", 
-      home:"Home", 
-      courses:"Courses", 
-      contact:"Contact",
       hero_title:"Exclusive Academy – The Key to Future ✨", 
       hero_text:"Exclusive Academy is not just a place for learning, but a space to take confident steps toward the future...", 
       see_courses:"📚 View our courses",
       name:"Your Name", 
       phone:"Your Phone", 
-      choose_course:"Choose a course", 
       send:"Send",
       course_en:"English", 
       course_ielts:"IELTS", 
@@ -81,10 +69,13 @@
       const key = el.getAttribute("data-key");
       if(translations[lang][key]) el.innerText = translations[lang][key];
     });
-    document.getElementById("ismingiz").placeholder = translations[lang].name;
-    document.getElementById("telefon").placeholder = translations[lang].phone;
+    // Form inputlar
+    document.getElementById("name").placeholder = translations[lang].name;
+    document.getElementById("phone").placeholder = translations[lang].phone;
     document.querySelector("button[type='submit']").innerText = translations[lang].send;
+    // Title
     document.title = translations[lang].title;
+    // Saqlash
     localStorage.setItem("lang", lang);
   }
 
@@ -94,13 +85,15 @@
   });
 
   // 📌 Telefon input faqat raqam
-  const phoneInput = document.getElementById("telefon");
-  phoneInput.addEventListener("input", function(){ this.value = this.value.replace(/\D/g,''); });
+  const phoneInput = document.getElementById("phone");
+  phoneInput.addEventListener("input", function(){
+    this.value = this.value.replace(/\D/g,'');
+  });
 
   // 📌 Formani tekshirish
-  const contactForm = document.getElementById("contactForm");
+  const contactForm = document.querySelector("form");
   contactForm.addEventListener("submit", function(e){
-    if(!document.getElementById("ismingiz").value.trim() || !phoneInput.value.trim()){
+    if(!document.getElementById("name").value.trim() || !phoneInput.value.trim()){
       e.preventDefault(); 
       alert("Iltimos, barcha maydonlarni to‘ldiring!");
     }
@@ -136,7 +129,4 @@
     item.style.transition="all 0.6s ease-out";
     observer.observe(item);
   });
-  window.addEventListener("load", ()=>{
-  setLanguage("uz"); // majburlab o'rnatish
-});
 </script>
